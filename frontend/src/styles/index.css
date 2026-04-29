@@ -1,0 +1,159 @@
+:root {
+  --bg: #0d1421;
+  --bg-dark: #151e33;
+  --bg-light: #1c2840;
+  --panel: #1c2840;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --muted: #64748b;
+  --line: rgba(255, 255, 255, 0.1);
+  --brand: #fac216;
+  --brand-dark: #d4a00a;
+  --brand-2: #fac216;
+  --accent: #3b82f6;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --content-max: 1120px;
+  --content-max-wide: 1240px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text);
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--brand);
+}
+
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.container.narrow {
+  max-width: 420px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap {
+  gap: 10px;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  padding: 14px;
+  color: var(--text);
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+select,
+button,
+textarea {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+}
+
+button,
+.button {
+  background: var(--brand);
+  color: #151e33;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+}
+
+button.secondary,
+.button.secondary {
+  background: var(--bg-light);
+  color: var(--text);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.page-shell,
+.dashboard-page,
+.games-page {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 16px 10px;
+  }
+}

@@ -1,0 +1,177 @@
+.create-game-shell {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.create-game-form-card,
+.create-game-availability-card {
+  height: 100%;
+}
+
+.create-game-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.create-game-help {
+  margin: 0.65rem 0 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.create-game-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.create-game-status-pill {
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.create-game-empty-state,
+.create-game-summary {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(10, 15, 28, 0.45);
+  border-radius: 20px;
+  padding: 1.1rem 1.15rem;
+}
+
+.create-game-empty-state p,
+.create-game-summary p {
+  margin: 0.4rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.create-game-availability {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.create-game-date-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+
+.create-game-date-card,
+.create-game-time-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 0.95rem 1rem;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.create-game-date-card:hover,
+.create-game-time-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(250, 204, 21, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.create-game-date-card.active,
+.create-game-time-card.active {
+  border-color: rgba(250, 204, 21, 0.75);
+  background: linear-gradient(180deg, rgba(250, 204, 21, 0.18), rgba(250, 204, 21, 0.08));
+  box-shadow: 0 14px 34px rgba(250, 204, 21, 0.12);
+}
+
+.create-game-date-day,
+.create-game-time-main {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.create-game-date-count,
+.create-game-time-meta {
+  font-size: 0.83rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.create-game-time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+
+.create-game-empty-inline {
+  padding: 0.9rem 0;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.create-game-summary {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.create-game-summary-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.create-game-summary-content {
+  display: grid;
+  gap: 0.15rem;
+}
+
+@media (max-width: 960px) {
+  .create-game-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .create-game-shell {
+    gap: 1rem;
+  }
+
+  .create-game-date-grid,
+  .create-game-time-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .create-game-section-head {
+    flex-direction: column;
+  }
+
+  .create-game-status-pill {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .create-game-shell {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) and (hover: none), (min-width: 1024px) and (max-width: 1199px) and (pointer: coarse) {
+  .create-game-date-card,
+  .create-game-time-card {
+    min-height: 88px;
+    padding: 1rem 1.05rem;
+  }
+}

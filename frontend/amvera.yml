@@ -1,0 +1,11 @@
+meta:
+  toolchain: docker
+
+build:
+  dockerfile: frontend/Dockerfile
+  args:
+    VITE_API_URL: /api
+    BACKEND_ORIGIN: https://api.teamup-kg.com
+
+run:
+  containerPort: 80

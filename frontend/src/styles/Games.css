@@ -1,0 +1,660 @@
+/* ====================================
+   GAMES PAGE
+   ==================================== */
+.games-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.games-toolbar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 0 20px;
+}
+
+.search-bar .search-icon {
+  color: #64748b;
+  font-size: 1.2rem;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 16px 0;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #64748b;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 16px 24px;
+  border-radius: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+/* Sport Tabs */
+.sport-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.sport-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  color: #94a3b8;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.sport-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sport-tab.active {
+  background: linear-gradient(135deg, var(--brand) 0%, #ffd54f 100%);
+  color: #151e33;
+  border-color: var(--brand);
+}
+
+/* Games Grid */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.game-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.game-card-tournament {
+  border-color: rgba(250, 194, 22, 0.24);
+  box-shadow: 0 18px 40px rgba(250, 194, 22, 0.08);
+}
+
+.game-card-featured {
+  position: relative;
+}
+
+.game-card-featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(250, 194, 22, 0.18);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.game-card:hover {
+  border-color: rgba(250, 194, 22, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.game-card-image {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-card-image img {
+  transform: scale(1.05);
+}
+
+.game-card-sport {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.game-card-status {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.game-card-status.open {
+  background: rgba(34, 197, 94, 0.9);
+  color: #fff;
+}
+
+.game-card-status.full {
+  background: rgba(239, 68, 68, 0.9);
+  color: #fff;
+}
+
+.game-card-status.closed {
+  background: rgba(239, 68, 68, 0.92);
+  color: #fff;
+}
+
+.game-card-status.cancelled {
+  background: rgba(148, 163, 184, 0.95);
+  color: #0f172a;
+}
+
+.game-card-type-badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(250, 194, 22, 0.95) 0%, rgba(255, 213, 79, 0.95) 100%);
+  color: #151e33;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.game-card-body {
+  padding: 20px;
+}
+
+.game-card-body h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.game-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.game-card-meta span {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.game-card-subtitle {
+  line-height: 1.4;
+}
+
+.game-card-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.game-card-progress .progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand) 0%, #22c55e 100%);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.game-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-credits {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+/* ====================================
+   GAMES RESPONSIVE OVERRIDES
+   ==================================== */
+.games-page,
+.games-toolbar,
+.games-grid,
+.game-card,
+.game-card-footer {
+  min-width: 0;
+}
+
+@media (max-width: 479px) {
+  .games-toolbar {
+    gap: 12px;
+  }
+
+  .search-bar,
+  .filter-btn {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .search-bar {
+    padding-inline: 14px;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .game-card-body {
+    padding: 16px;
+  }
+
+  .game-card-footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .games-page {
+    max-width: 700px;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .games-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .games-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+.join-btn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--brand) 0%, #ffd54f 100%);
+  color: #151e33;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(250, 194, 22, 0.3);
+}
+
+.join-btn.disabled {
+  background: #4b5563;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty-state .empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.empty-state h3 {
+  margin: 0 0 8px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.empty-state p {
+  color: #64748b;
+  margin: 0 0 24px;
+}
+
+.empty-state .glass-btn {
+  min-height: 44px;
+  box-shadow: 0 6px 16px rgba(250, 194, 22, 0.12);
+}
+
+.empty-state .glass-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(250, 194, 22, 0.14);
+}
+
+/* ====================================
+   RESPONSIVE ADJUSTMENTS
+   ==================================== */
+@media (max-width: 900px) {
+  .games-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .games-page .page-header {
+    margin-bottom: 22px;
+  }
+
+  .games-page .page-header .btn-primary {
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  .search-bar {
+    min-width: 0;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .sport-tabs {
+    margin-bottom: 20px;
+  }
+
+  .game-card-body {
+    padding: 16px;
+  }
+
+  .game-card-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .join-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .game-card-image {
+    height: 160px;
+  }
+
+  .game-card-sport,
+  .game-card-status {
+    font-size: 0.75rem;
+    padding: 7px 10px;
+  }
+
+  .empty-state {
+    padding: 52px 18px;
+  }
+
+  .empty-state .glass-btn {
+    width: auto;
+    min-width: 168px;
+  }
+}
+
+/* ====================================
+   MOBILE-FIRST OVERRIDES
+   ==================================== */
+.games-page {
+  max-width: var(--content-max-wide);
+  padding-inline: 0;
+}
+
+.games-page .page-header {
+  margin-bottom: 18px;
+}
+
+.games-toolbar {
+  margin-bottom: 16px;
+}
+
+.search-bar {
+  min-width: 0;
+  border-radius: var(--radius-md);
+  padding: 0 14px;
+}
+
+.search-bar input {
+  padding: 13px 0;
+  font-size: 0.95rem;
+}
+
+.sport-tabs {
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.sport-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.sport-tab {
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  flex: 0 0 auto;
+}
+
+.games-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.game-card {
+  border-radius: 18px;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+}
+
+.game-card-image {
+  height: 152px;
+}
+
+.game-card-sport,
+.game-card-status {
+  top: 12px;
+  font-size: 0.74rem;
+  padding: 6px 10px;
+}
+
+.game-card-sport {
+  left: 12px;
+}
+
+.game-card-status {
+  right: 12px;
+}
+
+.game-card-body {
+  padding: 16px;
+}
+
+.game-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.game-card-title-block h3 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.game-card-subtitle {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  font-size: 0.84rem;
+}
+
+.game-card-meta {
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.game-card-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+  font-size: 0.86rem;
+}
+
+.game-card-capacity {
+  color: #cbd5e1;
+}
+
+.game-card-progress {
+  margin-bottom: 14px;
+}
+
+.game-card-footer {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.game-credits {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(250, 194, 22, 0.1);
+  border: 1px solid rgba(250, 194, 22, 0.2);
+  font-size: 0.92rem;
+}
+
+.join-btn {
+  width: 100%;
+  min-height: 44px;
+  padding: 11px 16px;
+  text-align: center;
+}
+
+.empty-state {
+  padding: 48px 16px;
+}
+
+.empty-state .empty-icon {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 600px) {
+  .games-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 960px) {
+  .games-page {
+    max-width: 1200px;
+  }
+
+  .games-toolbar {
+    margin-bottom: 20px;
+  }
+
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .game-card-image {
+    height: 170px;
+  }
+
+  .game-card-body {
+    padding: 18px;
+  }
+
+  .game-card-top {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .game-card-title-block {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .game-card-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .join-btn {
+    width: auto;
+  }
+}

@@ -1,0 +1,364 @@
+.partner-page-shell {
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.partner-page-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.partner-page-subtitle {
+  margin: 6px 0 0;
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.partner-section-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 0;
+}
+
+.partner-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.partner-section-heading h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.partner-section-heading p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.84rem;
+}
+
+.partner-form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.partner-form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.partner-form-group label {
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.partner-form-group input,
+.partner-calendar-select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+}
+
+.partner-form-group input::placeholder {
+  color: #64748b;
+}
+
+.partner-sport-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.partner-sport-pill {
+  min-height: 40px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #cbd5e1;
+}
+
+.partner-sport-pill.active {
+  border-color: rgba(250, 194, 22, 0.45);
+  background: rgba(250, 194, 22, 0.12);
+  color: #fff4c2;
+}
+
+.partner-form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.partner-venue-list {
+  display: grid;
+  gap: 12px;
+}
+
+.partner-venue-card {
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.partner-venue-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.partner-venue-card-head h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.partner-venue-location {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  line-height: 1.45;
+}
+
+.partner-venue-rate {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(250, 194, 22, 0.12);
+  border: 1px solid rgba(250, 194, 22, 0.22);
+  color: #fde68a;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.partner-venue-meta {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+}
+
+.partner-venue-edit-btn {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.partner-calendar-toolbar {
+  display: grid;
+  gap: 12px;
+}
+
+.partner-calendar-add-btn {
+  width: 100%;
+}
+
+.partner-calendar-card {
+  overflow: hidden;
+}
+
+.partner-analytics-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.partner-analytics-stat {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.partner-analytics-stat-highlight {
+  background: linear-gradient(180deg, rgba(250, 194, 22, 0.14), rgba(250, 194, 22, 0.05));
+  border-color: rgba(250, 194, 22, 0.24);
+}
+
+.partner-analytics-label {
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.partner-analytics-value {
+  color: #fff2b2;
+  font-size: 1.8rem;
+  line-height: 1.1;
+}
+
+.partner-analytics-summary {
+  display: grid;
+  gap: 12px;
+}
+
+.partner-analytics-summary-item {
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.partner-analytics-summary-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.partner-analytics-summary-text {
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.partner-analytics-bookings {
+  display: grid;
+  gap: 10px;
+}
+
+.partner-analytics-booking {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.partner-analytics-booking-title {
+  color: #fff;
+  font-weight: 600;
+}
+
+.partner-analytics-booking-meta {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.partner-analytics-booking-side {
+  display: grid;
+  gap: 4px;
+  justify-items: end;
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  text-align: right;
+}
+
+@media (min-width: 760px) {
+  .partner-page-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .partner-form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-form-group-full {
+    grid-column: 1 / -1;
+  }
+
+  .partner-form-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .partner-form-actions button {
+    width: auto;
+  }
+
+  .partner-venue-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-calendar-toolbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .partner-calendar-add-btn {
+    width: auto;
+  }
+
+  .partner-analytics-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .partner-analytics-summary {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .partner-section-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .partner-page-shell {
+    gap: 12px;
+  }
+
+  .partner-venue-list,
+  .partner-analytics-grid,
+  .partner-analytics-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-analytics-booking {
+    flex-direction: column;
+  }
+
+  .partner-analytics-booking-side {
+    justify-items: start;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .partner-venue-list {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-analytics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-analytics-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .partner-page-shell {
+    max-width: 1040px;
+  }
+
+  .partner-analytics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
